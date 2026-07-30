@@ -12,9 +12,9 @@ import streamlit as st
 
 
 #================= API-KEY=================
-GOOGLE_KEY = st.sidebar.text_input("Google-API",type = "password")
-GROQ_KEY = st.sidebar.text_input("Groq-API",type = "password")
-TAVILY_KEY = st.sidebar.text_input("Tavily-API",type = "password")
+GOOGLE_API_KEY = st.sidebar.text_input("Google-API",type = "password")
+GROQ_API_KEY = st.sidebar.text_input("Groq-API",type = "password")
+TAVILY_API_KEY = st.sidebar.text_input("Tavily-API",type = "password")
 
 os.environ["GOOGLE_API_KEY"] = GOOGLE_KEY
 os.environ["GROQ_API_KEY"] = GROQ_KEY
@@ -37,9 +37,9 @@ else:
   )
 
   #=================FRONT END==================
-  st.title("AI-Agenr-Powered PPT Generator")
+st.title("AI-Agenr-Powered PPT Generator")
 
-  user_query = st.text_area("write your PPT topic or prompt:")
+user_query = st.text_area("write your PPT topic or prompt:")
 
 
 #================ASSESTS=========================
