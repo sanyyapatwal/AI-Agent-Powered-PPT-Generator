@@ -1,0 +1,8 @@
+install langchain
+install langchain_community
+install langchain_google_genai
+install OpenAI
+install langchain_groq
+install pytesseract
+install tavily-python
+install streamlit
