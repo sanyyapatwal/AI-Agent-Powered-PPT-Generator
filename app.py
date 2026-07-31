@@ -116,7 +116,7 @@ if all(ALL_API) and user_query:
   agent = create_agent(
       model = model ,
       tools = [search_latest_info,
-               generate_image]
+               generate_image])
   
   #=================DISPLAY AGENT================
   
