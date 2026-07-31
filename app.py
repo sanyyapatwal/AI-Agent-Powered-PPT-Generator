@@ -41,7 +41,7 @@ else:
 
    
 #=================FRONT END==================
-st.title("AI-Agenr-Powered PPT Generator")
+st.title("AI-Agent-Powered PPT Generator")
 
 user_query = st.text_area("write your PPT topic or prompt:")
 
@@ -112,7 +112,7 @@ def prompt_generator(model,query):
     f.write(final_prompt)
 
   return final_prompt
-if all(ALL_API) and user_query
+if all(ALL_API) and user_query:
   agent = create_agent(
       model = model ,
       tools = [search_latest_info,
@@ -127,16 +127,16 @@ if all(ALL_API) and user_query
   with tab1:
     st.sidebar("GENERATE IMAGE  GIVE PROMPT")
     if st.button("CLICK TO GENEARTE:",key="generate_img_button"):
-      with st.spinner(Running Agent..):
+      with st.spinner("Running Agent.."):
         data = f"https://image.pollinations.ai/{user_query}"
-        timr.sleep(3)
+        time.sleep(3)
         st.image(data)
         #st.image("Image.jpeg")
   
   with tab2:
     st.header("CHECK LATEST NEWS")
     if st.button("FETCH NEWS: ", key="news_button"):
-      with st.spinner(Running Agent.."):
+      with st.spinner("Running Agent.."):
   
   
        prompt= """give latest news India or world news realted 
