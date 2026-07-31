@@ -143,10 +143,9 @@ if all(ALL_API) and user_query:
        to tech , bussiness,jobs,or user requested output
        In Proper HTML News Templates"""+user_query
   
-       response = agent.invoke({'messages':[{'role':"user",
-                                        "content": final_prompt}]})
+       response = agent.invoke({'messages':[{'role':"user","content": final_prompt}]})
   
-       code = response['messages'][-1].content[-1]['text']
+       code = response['messages'][-1].content
   
        st.html(code, width= "stretch",
               unsafe_allow_javascript= True)
@@ -161,7 +160,7 @@ if all(ALL_API) and user_query:
         response = agent.invoke({'messages':[{'role':"user",
                                         "content": final_prompt}]})
   
-        code = response['messages'][-1].content[-1]['text']
+        code = response['messages'][-1].content[-1].content[-1]['text']
         st.html(code, width="stretch",
                 unsafe_allow_javascript=True)
         if st.download_button(label = "DOWNLOAD PPT",
