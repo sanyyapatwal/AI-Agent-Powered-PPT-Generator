@@ -131,7 +131,7 @@ if all(ALL_API) and user_query:
         data = f"https://image.pollinations.ai/{user_query}"
         import requests as r
         img_data = r.get(data)
-       # time.sleep(3)
+        # time.sleep(3)
         st.image(data)
         #st.image("Image.jpeg")
   
