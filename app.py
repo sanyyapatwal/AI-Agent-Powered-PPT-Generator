@@ -146,8 +146,7 @@ if all(ALL_API) and user_query:
        response = agent.invoke({'messages':[{'role':"user",
                                              "content": prompt}]})
   
-       code = response['messages'][-1].content
-  
+       code = response['messages'][-1].content[0]['text']
        st.html(code, width= "stretch",
               unsafe_allow_javascript= True)
   
